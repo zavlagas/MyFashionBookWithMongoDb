@@ -1,4 +1,4 @@
-package com.fashionbook.main;
+package com.fashionbook;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
