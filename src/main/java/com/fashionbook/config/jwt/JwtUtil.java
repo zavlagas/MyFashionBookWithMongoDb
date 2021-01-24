@@ -6,22 +6,20 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.stereotype.Service;
-
+import org.springframework.stereotype.Component;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
 
-@Service
+@Component
 public class JwtUtil {
 
 //    public static final long JWT_TOKEN_VALIDITY = 1000 * 3600;
 
     public static final long JWT_TOKEN_VALIDITY = 5000 * 3600;
 
-    @Value("${jwt.secret}")
-    private String secret;
+    private String secret = "secret";
 
     // retrieve username from jwt token
     public String getUsernameFromToken(String token) {
