@@ -18,8 +18,6 @@ public class Product {
     private List<String> images;
     private Date createdDate;
     private Brand brand;
-    @Field("likes")
-    private List<MyUser> likedProductUsers;
 
 
     public Product(String title, String description, List<String> images,Date createdDate , Brand brand) {
@@ -28,7 +26,6 @@ public class Product {
         this.images = images;
         this.createdDate = createdDate;
         this.brand = brand;
-        this.likedProductUsers = new LinkedList<>();
     }
 
 
@@ -73,11 +70,4 @@ public class Product {
         this.brand = brand;
     }
 
-    public List<MyUser> getLikedProductUsers() {
-        return likedProductUsers;
-    }
-
-    public void setLikedProductUsers(List<MyUser> likedProductUsers) {
-        this.likedProductUsers = likedProductUsers;
-    }
 }
